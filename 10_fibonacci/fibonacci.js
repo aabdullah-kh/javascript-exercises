@@ -1,4 +1,17 @@
-const fibonacci = function() {
+const fibonacci = function(num) {
+    if (typeof num != "number") {
+        return fibonacci(parseInt(num))
+    }
+
+    if (num < 0) {
+        return "OOPS"
+    }
+
+    if (num < 2) {
+        return num
+    }
+
+    return fibonacci(num - 1) + fibonacci(num - 2)
 
 };
 
